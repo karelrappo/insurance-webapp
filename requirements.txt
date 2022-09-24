@@ -1,7 +1,10 @@
-pycaret==1.0.0
-Flask==1.1.1
-Jinja2==2.10.1
-gunicorn==19.9.0
-certifi==2019.11.28
-itsdangerous==1.1.0
-nltk==3.5
+Flask
+Jinja2
+gunicorn
+certifi
+itsdangerous
+nltk
+pandas
+numpy
+sklearn
+lightgbm
