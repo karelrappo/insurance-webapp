@@ -11,25 +11,42 @@
 </head>
 
 <body>
- <div class="login">
-	<h1>Predict Your Insurance Costs</h1>
-     <span class>Insert your data and press predict to obtain approximate Insurance costs.</span>
-     <!-- Getting inputs for the model -->
-    <form action="{{url_for('predict')}}" method="post">
-      <input type="text" name="age" placeholder="Age" required="required" /><br>
-    	<input type="text" name="sex" placeholder="Sex" required="required" /><br>
-        <input type="text" name="bmi" placeholder="BMI" required="required" /><br>
-        <input type="text" name="children" placeholder="Children" required="required" /><br>
-        <input type="text" name="smoker" value="Smoker" required="required" /><br>
-        <input type="text" name="region" placeholder="Region" required="required" /><br>
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
-   <br>
-   <br>
-
-
- </div>
- {{pred}}
-
+    <div class="main">
+     <div class="header">
+        <h1>Predict Your Insurance Costs</h1>
+         <span class>Insert your data and press predict to obtain approximate Insurance costs.</span>
+     </div>
+     <div class="login">
+         <!-- Getting inputs for the model -->
+        <form action="{{url_for('predict')}}" method="post">
+          <input type="text" name="age" placeholder="Age" required="required" /><br>
+          <label for="sex">Sex:</label><br>
+          <select id="sex" name="sex" required="required">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select><br>
+          <input type="text" name="bmi" placeholder="BMI" required="required" /><br>
+          <input type="text" name="children" placeholder="Children" required="required" /><br>
+          <label for="smoker">Are you a smoker?</label><br>
+          <select id="smoker" name="smoker" required="required">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select><br>
+          <label for="region">Select your region</label><br>
+          <select id="region" name="region" required="required">
+            <option value="southwest">South-West</option>
+            <option value="southeast">South-East</option>
+            <option value="northwest">North-West</option>
+            <option value="northeast">North-East</option>
+          </select><br>
+          <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </form>
+       <br>
+       <br>
+     </div>
+    </div>
+     <div class="prediction">
+        {{pred}}
+     </div>
 </body>
 </html>

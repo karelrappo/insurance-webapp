@@ -22,7 +22,7 @@ def predict():
     data_unseen = pd.DataFrame([final], columns = cols)
     prediction = regressor.predict(data_unseen)
     prediction = int(prediction[0])
-    return render_template('home.html', pred='Expected Bill will be {}'.format(prediction))
+    return render_template('home.html', pred='Expected Bill will be {} USD'.format(prediction))
 
 @app.route('/predict_api', methods=['POST'])
 def predict_api():
