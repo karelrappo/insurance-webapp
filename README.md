@@ -4,4 +4,4 @@ This is a practice project using Skicit Learn and Flask to create a simple web a
 2) uses the previously trained model (LightGBM) to predict expected insurance cost.
 3) Outputs the result to the user
 
-[Live application on Heroku](https://dashboard.heroku.com/apps/insur-webapp/settings)
+[Live application on Heroku](https://insur-webapp.herokuapp.com)
